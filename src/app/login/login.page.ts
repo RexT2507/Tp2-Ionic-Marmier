@@ -13,8 +13,8 @@ export class LoginPage implements OnInit {
 
   //  loginUserData: any = {};
 
-  @Input() prenom: any;
-  @Input() mdp: any;
+  @Input() prenom: any = '';
+  @Input() mdp: any = '';
 
   private user: User;
 
