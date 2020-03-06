@@ -1,5 +1,7 @@
 {
   "name": "Tp2-Ionic-Marmier",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
