@@ -25,7 +25,7 @@ export class LoginService {
           }
         ),
         tap(val => console.log(val)),
-        map(value => new User(value.id, value.name, value.username))
+        map(value => new User(value.id, value.name, value.email))
       );
 }
 }

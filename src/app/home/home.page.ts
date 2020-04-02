@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import User from '../models/User';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +8,6 @@ import User from '../models/User';
 export class HomePage {
 
   title: string;
-
-  private user: User;
 
   constructor() {}
 
