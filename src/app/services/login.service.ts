@@ -13,7 +13,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   login(id: string, mdp: string): Observable<User> {
-    return this.http.get<IUser[]>('https://jsonplaceholder.typicode.com/users?username=' + id)
+    return this.http.get<IUser[]>(`https://jsonplaceholder.typicode.com/users?username=${id}`)
       .pipe(
         map(
           value => {
