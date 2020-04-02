@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { LoginService } from '../services/login.service';
+
+import IUser from '../models/IUser';
 import User from '../models/User';
 
 
@@ -10,19 +12,35 @@ import User from '../models/User';
 })
 export class LoginPage implements OnInit {
 
-  @Input() prenom: any = '';
-  @Input() mdp: any = '';
+  // @Input() prenom: any = '';
+  // @Input() mdp: any = '';
 
-  private user: User;
+  id = '';
+  mdp = '';
 
-  constructor( private loginService: LoginService) { }
+  user: User;
+  loading = false;
+  error: string;
+
+  constructor( private loginService: LoginService ) { }
 
   ngOnInit() {
 
   }
 
-  loginUser() {
-    this.user = this.loginService.login(this.prenom, this.mdp);
-    console.log(this.user);
+
+  login() {
+    this.loading = true;
+    this.error = null;
+
+    this.loginService.login(this.id, this.mdp)
+      .subscribe(users => this.user = users,
+        error => {
+            this.error = error;
+            this.loading = false;
+        }, () => {
+            this.loading = false;
+        });
   }
+
 }

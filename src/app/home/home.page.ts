@@ -10,18 +10,13 @@ import User from '../models/User';
 export class HomePage {
 
   title: any;
-  user: User = {
-    id: '1',
-    nom: 'Marmier',
-    prenom: 'Baptiste',
-    email: 'baptiste.marmier@ynov.com'
-  };
+
+  private user: User;
 
   constructor(private loginService: LoginService) {}
 
   updateTitle() {
     this.title = 'Nouveau titre';
-    this.user = this.loginService.login('2', '123');
   }
 
 }

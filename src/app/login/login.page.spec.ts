@@ -1,9 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
+
 import { LoginPage } from './login.page';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
 describe('LoginPage', () => {
   let component: LoginPage;
@@ -12,7 +13,8 @@ describe('LoginPage', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ LoginPage ],
-      imports: [IonicModule.forRoot(), CommonModule, FormsModule]
+      imports: [IonicModule.forRoot(), CommonModule,
+        FormsModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoginPage);
@@ -23,4 +25,6 @@ describe('LoginPage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
 });

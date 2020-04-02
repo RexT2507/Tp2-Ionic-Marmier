@@ -1,0 +1,23 @@
+<div class="content">
+
+  <h1>Alert Button</h1>
+
+    <article class="message is-warning" [hidden]="hideContent">
+
+      <div class="message-header">
+
+        <p>Warning Code {{severity}}</p>
+
+      </div>
+
+      <div class="message-body">
+
+        {{ content }}
+
+      </div>
+
+    </article>
+
+    <button (click)="Toggle()" class="button is-info">Toggle Visibility</button>
+
+</div>
