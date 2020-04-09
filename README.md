@@ -3,6 +3,9 @@
 # Tp2-Ionic-Marmier
 Tp 2 noté Ionic Baptiste Marmier Ynov
 
+## DEMO DE L'APPLICATION
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
 ## CI
 
 + Cache 
