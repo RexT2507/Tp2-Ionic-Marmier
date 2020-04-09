@@ -32,10 +32,45 @@
     </ion-card-header>
   </ion-card>
 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Afficher vos coordonnées</ion-card-subtitle>
+      <ion-card-title>Tp géolocalisation</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button (click)="geoLoc()" color="primary">Afficher la position</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="latitude.length !== 0 && longitude.length !==0">
+    <ion-card-header>
+      <ion-card-subtitle>Avec Ionic Native</ion-card-subtitle>
+      <ion-card-title>Vos coordonnées</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Longitude</th>
+            <th scope="col">Latitude</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let lo of longitude">
+          <tr *ngFor="let la of latitude">
+            <td>{{lo}}</td>
+            <td>{{la}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
+
+
   <ion-card class="card-sign-out">
     <ion-button (click)="signOut()" color="danger">Déconnexion</ion-button>
   </ion-card>
-
   
 
 </ion-content>

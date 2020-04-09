@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { Router } from '@angular/router';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import Coord from '../models/Coord';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +11,16 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private camera: Camera, private router: Router) {}
+  constructor(private camera: Camera, private router: Router, private geolocation: Geolocation) {}
 
   title: string;
 
   image: any = '';
+
+  latitude: any[] = [];
+  longitude: any[] = [];
+
+  coord: Coord;
 
   updateTitle() {
     this.title = 'Nouveau titre';
@@ -42,6 +49,23 @@ export class HomePage {
     this.router.navigate(['login']).then(() => {
       window.location.reload();
     });
+  }
+
+  geoLoc() {
+    this.geolocation.getCurrentPosition().then((resp) => {
+      // resp.coords.latitude
+      // resp.coords.longitude
+     }).catch((error) => {
+       console.log('Error getting location', error);
+     });
+    const watch = this.geolocation.watchPosition();
+    watch.subscribe(
+      (data) => {
+        this.latitude.push(data.coords.latitude);
+        console.log(this.latitude);
+        this.longitude.push(data.coords.longitude);
+        console.log(this.longitude);
+     });
   }
 
 }

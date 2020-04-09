@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginService } from './services/login.service';
 
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +26,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
   providers: [
     StatusBar,
     Camera,
+    Geolocation,
     SplashScreen,
     LoginService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
