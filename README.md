@@ -2,3 +2,33 @@
 
 # Tp2-Ionic-Marmier
 Tp 2 noté Ionic Baptiste Marmier Ynov
+
+## CI
+
++ Cache 
++ Build `Ok`
++ Test `Ok`
++ Readme et Badge `Ok`
+
+## ANGULAR
+
++ Http Get Request `Ok`
++ Test unitaire Http `Ok`
+
+## IONIC
+
++ Build Android `Ok`
+
+## SCRIPT
+
++ Test `Ok`
++ Build `Ok`
+
+# Guide du développement du projet
+
+| Action dans le projet |    Étiquette    |
+| :---------------      |:---------------:|
+| Ajout                 |      [ADD]      |
+| Supprimer             |      [DEL]      |
+| Développement         |      [DEV]      |
+| Correction            |      [FIX]      |
