@@ -5,6 +5,7 @@ Tp 2 noté Ionic Baptiste Marmier Ynov
 
 ## CI
 
++ Cache `Ok`
 + Build `Ok`
 + Test `Ok`
 + Readme et Badge `Ok`
