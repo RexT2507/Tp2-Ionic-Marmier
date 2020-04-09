@@ -4,7 +4,7 @@
 Tp 2 noté Ionic Baptiste Marmier Ynov
 
 ## DEMO DE L'APPLICATION
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/RexT2507/Tp2-Ionic-Marmier/blob/master/src/assets/demo.gif)
 
 ## CI
 
