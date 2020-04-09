@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginService } from './services/login.service';
 
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,6 +24,7 @@ import { LoginService } from './services/login.service';
   ],
   providers: [
     StatusBar,
+    Camera,
     SplashScreen,
     LoginService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
