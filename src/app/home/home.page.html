@@ -67,6 +67,17 @@
     </ion-card-content>
   </ion-card>
 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Afficher une notification</ion-card-subtitle>
+      <ion-card-title>Tp notification</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button (click)="regNotification(3000)" color="primary">3 Secondes</ion-button>
+      <ion-button (click)="regNotification(10000)" color="primary">10 Secondes</ion-button>
+    </ion-card-content>
+  </ion-card>
 
   <ion-card class="card-sign-out">
     <ion-button (click)="signOut()" color="danger">Déconnexion</ion-button>

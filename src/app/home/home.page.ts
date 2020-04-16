@@ -3,6 +3,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { Router } from '@angular/router';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import Coord from '../models/Coord';
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,8 @@ import Coord from '../models/Coord';
 })
 export class HomePage {
 
-  constructor(private camera: Camera, private router: Router, private geolocation: Geolocation) {}
+  constructor(private camera: Camera, private router: Router, private geolocation: Geolocation,
+    private localNotifications: LocalNotifications) {}
 
   title: string;
 
@@ -66,6 +68,18 @@ export class HomePage {
         this.longitude.push(data.coords.longitude);
         console.log(this.longitude);
      });
+  }
+
+  regNotification(time: number) {
+    this.localNotifications.schedule({
+      title: `Notification de ${time}`,
+      text: `Tp noté Ionic Ynov`,
+      trigger: {
+        at: new Date(
+          new Date().getTime() + time
+        )
+      },
+    });
   }
 
 }
