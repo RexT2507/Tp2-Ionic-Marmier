@@ -14,6 +14,13 @@ import { LoginService } from './services/login.service';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
+import {
+  CameraPreview,
+  CameraPreviewPictureOptions,
+  CameraPreviewOptions,
+  CameraPreviewDimensions
+} from '@ionic-native/camera-preview/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +36,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
     Camera,
     Geolocation,
     LocalNotifications,
+    CameraPreview,
     SplashScreen,
     LoginService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

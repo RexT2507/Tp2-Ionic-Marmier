@@ -1,0 +1,19 @@
+ion-header 
+{
+    ion-title
+    {
+        float: left;
+        font-size: 18px;
+        padding-top: 5px;
+    }
+    
+    ion-icon
+    {
+        float: right;
+        padding-right: 10px;
+        font-size: 35px;
+    }
+}
+.custom-ion-content{
+    --background:transparent;
+}

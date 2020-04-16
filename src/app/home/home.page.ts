@@ -5,6 +5,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 import Coord from '../models/Coord';
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -12,8 +13,12 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 })
 export class HomePage {
 
-  constructor(private camera: Camera, private router: Router, private geolocation: Geolocation,
-    private localNotifications: LocalNotifications) {}
+  constructor(
+    private camera: Camera,
+    private router: Router,
+    private geolocation: Geolocation,
+    private localNotifications: LocalNotifications
+  ) {}
 
   title: string;
 
@@ -81,5 +86,6 @@ export class HomePage {
       },
     });
   }
+
 
 }

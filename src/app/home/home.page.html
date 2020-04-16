@@ -13,6 +13,7 @@
     </ion-toolbar>
   </ion-header>
 
+  <!-- TP CAMERA -->
   <ion-card>
     <ion-card-header>
       <ion-card-subtitle>Prenez et affichez une photo</ion-card-subtitle>
@@ -31,7 +32,9 @@
       <ion-card-title>Votre Photo</ion-card-title>
     </ion-card-header>
   </ion-card>
+  <!-- FIN TP CAMERA -->
 
+  <!-- TP COORDONNEES -->
   <ion-card>
     <ion-card-header>
       <ion-card-subtitle>Afficher vos coordonnées</ion-card-subtitle>
@@ -66,7 +69,9 @@
       </table>
     </ion-card-content>
   </ion-card>
+  <!-- FIN TP COORDONNEES -->
 
+  <!-- TP NOTIFICATION -->
   <ion-card>
     <ion-card-header>
       <ion-card-subtitle>Afficher une notification</ion-card-subtitle>
@@ -78,7 +83,23 @@
       <ion-button (click)="regNotification(10000)" color="primary">10 Secondes</ion-button>
     </ion-card-content>
   </ion-card>
+  <!-- FIN TP NOTIFICATION -->
 
+  <!-- TP CAMERA PREVIEW -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Afficher une preview caméra</ion-card-subtitle>
+      <ion-card-title>Tp preview camera</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button [routerLink]="['/camera-preview']" routerLinkActive="router-link-active" color="primary">Preview</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <!-- FIN TP CAMERA PREVIEW -->
+
+
+  <!-- DECONNEXION -->
   <ion-card class="card-sign-out">
     <ion-button (click)="signOut()" color="danger">Déconnexion</ion-button>
   </ion-card>
