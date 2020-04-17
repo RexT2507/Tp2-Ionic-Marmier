@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { Camera, CameraOptions } from '@ionic-native/Camera/ngx';
 import { Router } from '@angular/router';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import Coord from '../models/Coord';
@@ -28,10 +28,6 @@ export class HomePage {
   longitude: any[] = [];
 
   coord: Coord;
-
-  updateTitle() {
-    this.title = 'Nouveau titre';
-  }
 
   openCam() {
 

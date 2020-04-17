@@ -7,7 +7,8 @@ import { DebugElement } from '@angular/core';
 describe('AlertButtonComponent', () => {
   let component: AlertButtonComponent;
   let fixture: ComponentFixture<AlertButtonComponent>;
-  let de: DebugElement;
+
+  const exist = true;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -37,6 +38,18 @@ describe('AlertButtonComponent', () => {
   // Condition logique comparaison numérique
   it('should have a severity level greater than 2', () => {
     expect(component.severity).toBeGreaterThan(2);
+  });
+
+  it('toggle', () => {
+    const lifeFunc = true;
+    expect(component.toggle());
+    expect(lifeFunc).toEqual(exist);
+  });
+
+  it('toggleAsync', () => {
+    const lifeFunc = true;
+    expect(component.toggleAsync());
+    expect(lifeFunc).toEqual(exist);
   });
 
 

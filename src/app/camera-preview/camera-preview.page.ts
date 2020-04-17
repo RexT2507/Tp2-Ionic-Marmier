@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 
 @Component({
@@ -6,7 +6,7 @@ import { CameraPreview } from '@ionic-native/camera-preview/ngx';
   templateUrl: './camera-preview.page.html',
   styleUrls: ['./camera-preview.page.scss'],
 })
-export class CameraPreviewPage implements OnInit {
+export class CameraPreviewPage implements OnInit, OnDestroy {
 
   image: any;
   // Aucun filtre par défaut
@@ -18,7 +18,12 @@ export class CameraPreviewPage implements OnInit {
 
   constructor(private cameraPreview: CameraPreview) { }
 
+
   ngOnInit() {
+  }
+
+  ngOnDestroy() {
+   this.stopCamera();
   }
 
   // Démarrer la caméra
