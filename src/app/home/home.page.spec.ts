@@ -49,11 +49,11 @@ describe('HomePage', () => {
     expect(component.signOut());
   });
 
-  it('geoLoc', () => {
-    const lifeFunc = true;
-    expect(lifeFunc).toEqual(exist);
-    expect(component.geoLoc());
-  });
+  // it('geoLoc', () => {
+  //   const lifeFunc = true;
+  //   expect(lifeFunc).toEqual(exist);
+  //   expect(component.geoLoc());
+  // });
 
   it('regNotification', () => {
     const lifeFunc = true;

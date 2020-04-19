@@ -56,8 +56,10 @@ export class HomePage {
 
   geoLoc() {
     this.geolocation.getCurrentPosition().then((resp) => {
-      // resp.coords.latitude
-      // resp.coords.longitude
+      // tslint:disable-next-line: no-unused-expression
+      resp.coords.latitude;
+      // tslint:disable-next-line: no-unused-expression
+      resp.coords.longitude;
      }).catch((error) => {
        console.log('Error getting location', error);
      });
