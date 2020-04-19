@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-import { Camera } from '@ionic-native/Camera/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
 import { HomePage } from './home.page';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
